@@ -6,6 +6,8 @@
     box-sizing: border-box;
 }
 
+
+
 body{
     display: flex;
     justify-content: center;
@@ -14,17 +16,22 @@ body{
     background: #081b29;
     overflow: hidden;
 	font-family: 'Poppins', sans-serif;
+    
+}
+
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
 }
 
 .wrapper{
-    position: relative;
-    width: 500px;
-    height: 500px;
-    
-    border-radius: 50%;
     display: flex;
     justify-content: center;
+    justify-items: center;
     align-items: center;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
 	animation: colorful 30s linear infinite;
 }
 
@@ -165,16 +172,14 @@ body{
 
 .logo{
 	position: absolute;
-	display: flex;
+	display:inline;
 	justify-content: center;
 	align-items: center;
-	
-	
+	z-index: 100;
 }
 
 .logo img{
 	width: 300px;
 	opacity: 20%;
-	
 }
 
