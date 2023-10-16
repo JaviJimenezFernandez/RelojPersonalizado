@@ -6,19 +6,37 @@
   box-sizing: border-box;
 }
 
+/*
+display: flex;
+  justify-content:center;
+  justify-items: center;
+*/
+
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
   background: #081b29;
   overflow: hidden;
   font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-section {
-  min-height: 100vh;
-  padding: 10rem 9% 2rem;
+.contenedor{
+  position: relative;
+  width: 50em;
+  height: 50em;
+  /*border: dashed red;*/
+}
+
+.reloj  {
+  position: absolute;
+  margin: 4rem;
+  width: 40em;
+  height: 40em;
+  padding: 5em;
+  /*border: dashed;*/
 }
 
 .wrapper {
@@ -26,10 +44,11 @@ section {
   justify-content: center;
   justify-items: center;
   align-items: center;
-  width: 500px;
-  height: 500px;
+  width: 31.25em;
+  height: 31.25em;
   border-radius: 50%;
   animation: colorful 30s linear infinite;
+  /*border: dashed;*/
 }
 
 @keyframes colorful {
@@ -51,14 +70,14 @@ section {
   position: absolute;
   /*360grados dividido entre 60 segundos*/
   transform: rotate(calc(var(--index) * 6deg));
-  inset: -20px;
+  inset: -1.25em;
   text-align: center;
 }
 
 .bar-seconds span p {
   display: inline-block;
-  width: 2px;
-  height: 12px;
+  width: 0.125em;
+  height: 0.75em;
   background: #0ef;
   border-radius: 2px;
   box-shadow: 0 0 10px #0ef;
@@ -67,8 +86,8 @@ section {
 /* 5n = todos los multiplos de 5*/
 .bar-seconds span:nth-child(5n) p {
   background: white;
-  width: 5px;
-  height: 18px;
+  width: 0.3125em;
+  height: 1.125em;
   transform: translateY(1px);
 }
 
@@ -83,7 +102,7 @@ section {
 .number-hours span p {
   font-size: 52px;
   color: #0ef;
-  text-shadow: 0 0 10px #0ef;
+  text-shadow: 0 0 0.625rem #0ef;
   transform: rotate(calc(var(--index) * -30deg));
 }
 
@@ -92,6 +111,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  border: dashed;
 }
 
 .hands-box .hand {
@@ -109,19 +129,19 @@ section {
 }
 
 .hands-box .hours {
-  width: 320px;
-  height: 320px;
+  width: 20em;
+  height: 20em;
 }
 
 .hands-box .hours i {
-  width: 8px;
-  height: 160px;
+  width: 0.5em;
+  height: 10em;
   background: #0ef;
 }
 
 .hands-box .minutes {
-  width: 450px;
-  height: 450px;
+  width: 28.125em;
+  height: 28.125em;
 }
 
 .hands-box .minutes::before {
@@ -129,22 +149,22 @@ section {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 25px;
-  height: 25px;
+  width: 1.5625em;
+  height: 1.5625em;
   background: #0ef;
   border-radius: 50%;
   box-shadow: 0 0 15px #0ef;
 }
 
 .hands-box .minutes i {
-  width: 8px;
-  height: 225px;
+  width: 0.5em;
+  height: 14.0625em;
   background: #0ef;
 }
 
 .hands-box .seconds {
-  width: 480px;
-  height: 480px;
+  width: 30em;
+  height: 30em;
 }
 
 .hands-box .seconds::before {
@@ -152,16 +172,16 @@ section {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 15px;
-  height: 15px;
+  width: 0.9375em;
+  height: 0.9375em;
   background: #fff;
   border-radius: 50%;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 }
 
 .hands-box .seconds i {
-  width: 4px;
-  height: calc(240px + 70px);
+  width: 0.25em;
+  height: calc(15em + 4.375em);
   background: white;
   box-shadow: none;
 }
@@ -172,10 +192,11 @@ section {
   justify-content: center;
   align-items: center;
   z-index: 100;
+  /*border: dashed;*/
 }
 
 .logo img {
-  width: 300px;
+  width: 18.75em;
   opacity: 20%;
 }
 
