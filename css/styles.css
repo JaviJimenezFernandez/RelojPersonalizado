@@ -24,6 +24,7 @@ body {
 }
 
 .contenedor{
+  float: right;
   position: relative;
   width: 50em;
   height: 50em;
@@ -111,7 +112,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: dashed;
 }
 
 .hands-box .hand {
@@ -191,7 +191,7 @@ body {
   display: inline;
   justify-content: center;
   align-items: center;
-  z-index: 100;
+  z-index: -1;
   /*border: dashed;*/
 }
 
@@ -200,3 +200,90 @@ body {
   opacity: 20%;
 }
 
+@media (max-width: 768px){
+  body{
+    width: 70vw;
+    height: 100vh;
+  }
+
+  .contenedor{
+    float: right;
+    position: relative;
+    width: 35em;
+    height: 35em;
+    /*border: dashed red;*/
+  }
+  
+  .reloj  {
+    position: absolute;
+    margin: 4rem;
+    width: 20em;
+    height: 20em;
+    padding: 5em;
+    /*border: dashed;*/
+  }
+  
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    width: 18em;
+    height: 18em;
+    border-radius: 50%;
+    animation: colorful 30s linear infinite;
+    /*border: dashed;*/
+  }
+
+  .number-hours span p {
+    font-size: 30px;
+  }
+
+  .logo img {
+    width: 12em;
+    opacity: 20%;
+  }
+
+  .bar-seconds span p {
+    display: inline-block;
+    width: 0.1em;
+    height: 0.55em;
+  }
+
+  .bar-seconds span:nth-child(5n) p {
+    width: 0.15em;
+    height: 0.9em;
+  }
+
+  .hands-box .hours {
+    width: 20em;
+    height: 12em;
+  }
+  
+  .hands-box .hours i {
+    width: 0.4em;
+    height: 6em;
+  }
+
+  .hands-box .minutes {
+    width: 28.125em;
+    height: 16.125em;
+  }
+  
+  .hands-box .minutes i {
+    width: 0.4em;
+    height: 8em;
+    background: #0ef;
+  }
+
+  .hands-box .seconds {
+    width: 30em;
+    height: 17em;
+  }
+  
+  .hands-box .seconds i {
+    width: 0.2em;
+    height: calc(7em + 4.375em);
+  }
+
+}
