@@ -23,6 +23,7 @@ body {
   justify-content: center;
   align-items: center;
   background: linear-gradient(to bottom, #041020 0%, #18364d 100%);
+  background-attachment: fixed;
 }
 
 .contenedor{
