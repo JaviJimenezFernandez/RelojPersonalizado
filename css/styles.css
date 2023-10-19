@@ -14,6 +14,7 @@ display: flex;
 
 body {
   height: 100vh;
+  width: 100vw;
   background: #081b29;
   overflow: hidden;
   font-family: "Poppins", sans-serif;
@@ -21,11 +22,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(to bottom, #041020 0%, #18364d 100%);
+  background: linear-gradient(to bottom, #041020 0%, #18364d 100%);
 }
 
 .contenedor{
-  float: right;
   position: relative;
   width: 50em;
   height: 50em;
@@ -201,11 +201,14 @@ body {
   opacity: 20%;
 }
 
+/* MEDIA QUERY PARA RESOLUCIÓN MÓVIL*/
+
 @media (max-width: 768px){
   body{
-    width: 70vw;
-    height: 100vh;
-    background-image: no-repeat;
+    width: 100vw;
+    min-height: 100%;
+    background-attachment: fixed; /*Para que el gradiente de fondo se vea en todo el alto y no se repita
+    a medida que haces el formato mas vertical*/
   }
 
   .contenedor{
@@ -218,7 +221,7 @@ body {
   
   .reloj  {
     position: absolute;
-    margin: 4rem;
+    margin: 0.8rem 4rem;
     width: 20em;
     height: 20em;
     padding: 5em;
